@@ -1,0 +1,78 @@
+.login-forms{
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 80px;
+    max-width: 480px;
+    margin-bottom: 40px;
+    float: left;
+    margin-right: 80px;
+    .form-title{
+        font-size: 32px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    .form-group{
+        background-color: #EFF0F7;
+        border: 2px solid #EFF0F7;
+        border-radius: 16px;
+        padding: 8px 40px 8px 70px;
+        margin-bottom: 28px;
+        display: block;
+        position: relative;
+        transition: .35s;
+        input{
+            width: 100%;
+            padding: 0;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+        }
+        .icon{
+            font-size: 30px;
+            color: #A0A3BD;
+            position: absolute;
+            left: 24px;
+            top: 20px;
+            transition: .35s;
+        }
+        label{
+            font-size: 14px;
+            font-weight: 500;
+            color: #6E7191;
+        }
+        .clear{
+            color: #A0A3BD;
+            font-size: 24px;
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            display: none;
+            cursor: pointer;
+        }
+        &.active{ 
+            border-color: $base-color;
+            background-color: #fff;
+            .icon{
+                color: $text-color;
+            }
+            .clear{
+                display: block;
+            }
+        }
+    }
+    .submit-btn{
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 600;
+        background-color: $base-color;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        padding: 18px 15px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        border-radius: 16px;
+    }
+}
