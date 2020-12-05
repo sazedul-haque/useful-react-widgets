@@ -25,5 +25,9 @@ img{
 .dashboard{
     background-color: $bg-color;
     padding: 40px;
+    .dashbaord-item{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
 }
-
