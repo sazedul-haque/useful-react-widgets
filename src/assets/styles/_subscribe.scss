@@ -28,12 +28,20 @@
             position: relative;
             transition: .35s;
             flex: 1;
+            height: 68px;
             input{
+                background-color: transparent;
+                position: absolute;
                 width: 100%;
-                padding: 0;
+                height: 100%;
+                left: 0;
+                z-index: 99;
+                top: 0;
+                padding: 24px 40px 16px 70px;
                 outline: none;
                 border: none;
                 font-size: 16px;
+                z-index: 99;
             }
             .icon{
                 font-size: 30px;
@@ -44,9 +52,13 @@
                 transition: .35s;
             }
             label{
-                font-size: 14px;
+                font-size: 16px;
+                position: absolute;
+                top: 22px;
+                transition: .25s;
                 font-weight: 500;
                 color: #6E7191;
+                z-index: 9;
             }
             .clear{
                 color: #A0A3BD;
@@ -56,15 +68,28 @@
                 right: 10px;
                 display: none;
                 cursor: pointer;
+                z-index: 999;
             }
-            &.active{ 
+            &:hover {
+                .clear{
+                    display: block;
+                }
+            }
+            &.focus{ 
                 border-color: $base-color;
                 background-color: #fff;
                 .icon{
                     color: $text-color;
                 }
-                .clear{
-                    display: block;
+                label{
+                    font-size: 14px;
+                    top: 8px;
+                }
+            }
+            &.active {
+                label{
+                    font-size: 14px;
+                    top: 8px;
                 }
             }
         }

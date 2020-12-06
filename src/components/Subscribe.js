@@ -3,7 +3,7 @@ import { EmailOutlined, ClearOutlined, ArrowForwardOutlined } from '@material-ui
 
 const Subscribe = () => {
     const [email, setEmail] = useState('');
-    const [active, setActive] = useState('');
+    const [focus, setFocus] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,11 +23,11 @@ const Subscribe = () => {
             <h3>Join our mailing list.</h3>
             <p>Recieve 15% off your order at checkout and save today!</p>
             <form onSubmit={handleSubmit} noValidate>
-                <div className={`form-group ${active === 'email' ? 'active' : ''}`}>
+                <div className={`form-group ${focus === 'email' ? 'focus' : ''} ${email ? 'active' : ''}`}>
                     <EmailOutlined className="icon" />
                     <ClearOutlined className="clear" onClick={() => {setEmail('')}} />
                     <label>Email Address</label>
-                    <input type="email" name="email" value={email} onFocus={(e) => {setActive(e.target.name)}} onBlur={(e) => {setActive('')}}  onChange={(e) => {setEmail(e.target.value)}} />
+                    <input type="email" name="email" value={email} onFocus={(e) => {setFocus(e.target.name)}} onBlur={(e) => {setFocus('')}} onChange={(e) => {setEmail(e.target.value)}} />
                 </div>
                 <button type="submit" className="submit-btn"><ArrowForwardOutlined /></button>
             </form>
