@@ -10,7 +10,7 @@ const Login = () => {
         e.preventDefault();
 
         if(email && password) {
-            const formData = new FormData;
+            const formData = new FormData();
             formData.append('email', email);
             formData.append('password', password);
 
